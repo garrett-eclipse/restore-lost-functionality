@@ -1,10 +1,10 @@
 === Restore Lost Functionality ===
 Contributors: dartiss
-Donate link: https://artiss.blog/donate
 Tags: blogroll, comment, dashboard, dns, embeds, image, link, shortlink, srcset, title
 Requires at least: 4.6
-Tested up to: 4.7.3
-Stable tag: 3.0.1
+Tested up to: 4.9
+Requires PHP: 5.3
+Stable tag: 3.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,7 @@ Features are often removed simply due to streamlining the UI but sometimes there
 The following features are available for adding/removing...
 
 * Restore the OpenSans font in Admin (changed in WordPress 4.6)
-* Change the behaviour of automatic updates (adds in WordPress 3.7)
+* Change the behavior of automatic updates (adds in WordPress 3.7)
 * Move comment text field to the bottom (removed in WordPress 4.4)
 * Disable DNS prefetching (added in WordPress 4.6)
 * Disable enhanced embeds (added in WordPress 4.4)
@@ -40,11 +40,11 @@ Technical specification...
 * Licensed under [GPLv2 (or later)](http://wordpress.org/about/gpl/ "GNU General Public License")
 * Designed for both single and multi-site installations
 * PHP7 compatible
-* Fully internationalized, ready for translations **If you would like to add a translation to his plugin then please head to our [Translating WordPress](https://translate.wordpress.org/projects/wp-plugins/[plugin folder] "Translating WordPress") page**
+* Fully internationalized, ready for translations. **If you would like to add a translation to this plugin then please head to our [Translating WordPress](https://translate.wordpress.org/projects/wp-plugins/[plugin folder] "Translating WordPress") page**
 
 Once the plugin is installed head to Settings => Restore Functionality menu in the administration screen and switch on the functionality that you require. Only the functions available for your version of WordPress will be displayed. Further information is available via the Help tab at the top of the screen.
 
-Please see below for full details on the functions that this plugin covers, as well as full details on why they were changed in the first place.
+Please visit the [Github page](https://github.com/dartiss/restore-lost-functionality "Github") for the latest code development, planned enhancements and known issues.
 
 == Admin Fonts ==
 
@@ -56,7 +56,7 @@ To switch back to the OpenSans fonts you will need to install the [OpenSans FTW]
 
 Since WordPress 3.7, minor updates have updated automatically. This is to ensure critical bugs and security updates are pushed out as quickly as possible. Major updates, though, require a manual initiation.
 
-A plugin by the name of [Update Control](https://wordpress.org/plugins/update-control/ "Update Control"), written by George Stephanis and Chip Bennett, allows you to control the behaviour of automatic updates. You can switch off automatic updates but, equally, switch them on for major updates as well. An installation link to this plugin can be found in the Restore Lost Functionality options screen.
+A plugin by the name of [Update Control](https://wordpress.org/plugins/update-control/ "Update Control"), written by George Stephanis and Chip Bennett, allows you to control the behavior of automatic updates. You can switch off automatic updates but, equally, switch them on for major updates as well. An installation link to this plugin can be found in the Restore Lost Functionality options screen.
 
 == Comment Text Field ==
 
@@ -108,7 +108,7 @@ Activating this option with this plugin will cause the Links administration menu
 
 == Link This Bookmarklet ==
 
-Removed in WordPress 2.5 this bookmarklet, once saved to your browser favourites, will make it easy to add any site you're visiting to your Link Manager.
+Removed in WordPress 2.5 this bookmarklet, once saved to your browser favorites, will make it easy to add any site you're visiting to your Link Manager.
 
 == Restore Editor ==
 
@@ -157,7 +157,13 @@ Only those functions which are currently disabled in your WordPress installation
 
 == Changelog ==
 
-[Learn more about my version numbering methodology](https://artiss.blog/2016/09/wordpress-plugin-versioning/ "WordPress Plugin Versioning") 
+[Learn more about my version numbering methodology](https://artiss.blog/2016/09/wordpress-plugin-versioning/ "WordPress Plugin Versioning")
+
+= 3.0.2 =
+* Maintenance: Removed donation links
+* Maintenance: Numerous spelling corrections in the README
+* Maintenance: Minimum PHP level now added, as well as a link to the new Github repository
+* Maintenance: Removed language folder as well as the domain path
 
 = 3.0.1 =
 * Maintenance: Changes to README, particularly to accommodate directory changes
@@ -170,7 +176,7 @@ Only those functions which are currently disabled in your WordPress installation
 * Enhancement: New option to switch off inline links
 * Enhancement: New option to switch off enhanced embeds
 * Enhancement: New option to restore OpenSans font to admin
-* Enhancement: New option to alter the behaviour of automatic updates
+* Enhancement: New option to alter the behavior of automatic updates
 * Enhancement: New option to switch off DNS prefetching
 * Enhancement: New option to restore the editor buttons
 * Enhancement: Re-wrote the options screen. It now uses an array (stored separately to make updates easier) to generate the output
@@ -200,5 +206,5 @@ Only those functions which are currently disabled in your WordPress installation
 
 == Upgrade Notice ==
 
-= 3.0.1 =
+= 3.0.2 =
 * Various maintenance changes

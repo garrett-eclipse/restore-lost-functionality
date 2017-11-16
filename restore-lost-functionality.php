@@ -1,13 +1,12 @@
 <?php
 /*
 Plugin Name: Restore Lost Functionality
-Plugin URI: https://wordpress.org/plugins/restore-lost-functionality/
-Description: Restore removed WordPress functionality
-Version: 3.0.1
+Plugin URI: https://github.com/dartiss/restore-lost-functionality
+Description: Add or remove features to restore previous WordPress functionality.
+Version: 3.0.2
 Author: David Artiss
 Author URI: https://artiss.blog
 Text Domain: restore-lost-functionality
-Domain Path: /languages
 */
 
 include_once( plugin_dir_path( __FILE__ ) . 'includes/set-options.php' );
@@ -75,10 +74,7 @@ function restore_wp_adminbar_css() {
 
 function restore_wp_set_plugin_meta( $links, $file ) {
 
-	if ( false !== strpos( $file, 'restore-lost-functionality.php' ) ) {
-		$links = array_merge( $links, array( '<a href="http://wordpress.org/support/plugin/restore-lost-functionality">' . __( 'Support', 'restore-lost-functionality' ) . '</a>' ) );
-		$links = array_merge( $links, array( '<a href="https://artiss.blog/donate">' . __( 'Donate', 'restore-lost-functionality' ) . '</a>' ) );
-	}
+	if ( false !== strpos( $file, 'restore-lost-functionality.php' ) ) { $links = array_merge( $links, array( '<a href="http://wordpress.org/support/plugin/restore-lost-functionality">' . __( 'Support', 'restore-lost-functionality' ) . '</a>' ) ); }
 
 	return $links;
 }
