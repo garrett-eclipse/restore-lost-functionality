@@ -232,5 +232,5 @@ Only those functions which are currently disabled in your WordPress installation
 
 == Upgrade Notice ==
 
-= 3.0.2 =
-* Various maintenance changes
+= 3.1 =
+* New options added - Gutenberg, Jetpack, Press This!
