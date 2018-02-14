@@ -3,7 +3,7 @@
 Plugin Name: Restore Lost Functionality
 Plugin URI: https://github.com/dartiss/restore-lost-functionality
 Description: Add or remove features to restore previous WordPress functionality.
-Version: 3.0.2
+Version: 3.1
 Author: David Artiss
 Author URI: https://artiss.blog
 Text Domain: restore-lost-functionality
@@ -74,7 +74,12 @@ function restore_wp_adminbar_css() {
 
 function restore_wp_set_plugin_meta( $links, $file ) {
 
-	if ( false !== strpos( $file, 'restore-lost-functionality.php' ) ) { $links = array_merge( $links, array( '<a href="http://wordpress.org/support/plugin/restore-lost-functionality">' . __( 'Support', 'restore-lost-functionality' ) . '</a>' ) ); }
+	if ( false !== strpos( $file, 'restore-lost-functionality.php' ) ) {
+
+		$links = array_merge( $links, array( '<a href="https://github.com/dartiss/restore-lost-functionality">' . __( 'Github', 'restore-lost-functionality' ) . '</a>' ) );
+
+		$links = array_merge( $links, array( '<a href="http://wordpress.org/support/plugin/restore-lost-functionality">' . __( 'Support', 'restore-lost-functionality' ) . '</a>' ) );
+	}
 
 	return $links;
 }
@@ -164,16 +169,24 @@ function restore_wp_check_plugin( $plugin_dir, $plugin_name = '' ) {
 
 	if ( '' == $plugin_name ) { $plugin_name = $plugin_dir . '.php'; }
 
-	$plugins = get_plugins( '/' . $plugin_dir );
-	if ( $plugins ) {
-		if ( is_plugin_active( $plugin_dir . '/' . $plugin_name ) ) {
-			$status = 2;
-		} else {
-			$status = 1;
-		}
+	if ( is_plugin_active( $plugin_dir . '/' . $plugin_name ) ) {
+
+		$status = 2;
+
 	} else {
-		$status = 0;
+
+		$plugins = get_plugins( '/' . $plugin_dir );
+		
+		if ( $plugins ) {
+
+			$status = 1;
+		
+		} else {
+
+			$status = 0;
+		}
 	}
+
 	return $status;
 }
 ?>

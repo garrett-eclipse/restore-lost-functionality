@@ -67,7 +67,7 @@ while ( $loop < count( $screen_options ) ) {
 
 	$option = $screen_options[ $loop ];
 
-	if ( ( float ) $wp_version >= $option[ 6 ] ) {
+	if ( ( ( float ) $wp_version >= $option[ 6 ] && 'jetpack' != $option[ 6 ] ) or ( 'jetpack' == $option[ 6 ] && is_plugin_active( 'jetpack/jetpack.php' ) ) ) {
 
 		// If a plugin, check it's installation status and prepare an appropriate message
 
@@ -86,8 +86,8 @@ while ( $loop < count( $screen_options ) ) {
 
 		// Output the initial part of the form
 
-		echo '<tr>'  . $newline . '<th scope="row">' . $option[ 3 ] . ' </th>' . $newline;
-		echo '<td><fieldset><legend class="screen-reader-text"><span>' . $option[ 3 ] . ' </span></legend>' . $newline;
+		echo '<tr>'  . $newline . '<th scope="row">' . ucwords( $option[ 3 ] ) . ' </th>' . $newline;
+		echo '<td><fieldset><legend class="screen-reader-text"><span>' . ucwords( $option[ 3 ] ) . ' </span></legend>' . $newline;
 
 		// Add the checkbox, read-only if a plugin and whether a relevant current status
 

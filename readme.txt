@@ -2,9 +2,9 @@
 Contributors: dartiss
 Tags: blogroll, comment, dashboard, dns, embeds, image, link, shortlink, srcset, title
 Requires at least: 4.6
-Tested up to: 4.9
+Tested up to: 4.9.4
 Requires PHP: 5.3
-Stable tag: 3.0.2
+Stable tag: 3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,9 @@ The following features are available for adding/removing...
 * Remove SRCSET parameter from images (added in WordPress 4.4)
 * Add the ability to specify a title for links (removed in WordPress 4.2)
 * Restore the TinyMCE editor buttons to how they were (changed in WordPress 4.7)
+* Bring back the "classic" editor (to be removed in WordPress 5.0)
+* Press This returns! It was removed in WordPress 4.9
+* Add an Advanced Settings menu for Jetpack - lists all the modules!
 
 Technical specification...
 
@@ -41,6 +44,7 @@ Technical specification...
 * Designed for both single and multi-site installations
 * PHP7 compatible
 * Fully internationalized, ready for translations. **If you would like to add a translation to this plugin then please head to our [Translating WordPress](https://translate.wordpress.org/projects/wp-plugins/[plugin folder] "Translating WordPress") page**
+* Gutenberg ready
 
 Once the plugin is installed head to Settings => Restore Functionality menu in the administration screen and switch on the functionality that you require. Only the functions available for your version of WordPress will be displayed. Further information is available via the Help tab at the top of the screen.
 
@@ -52,11 +56,21 @@ System fonts have been used in Admin since WordPress 4.6. These replaced OpenSan
 
 To switch back to the OpenSans fonts you will need to install the [OpenSans FTW](https://wordpress.org/plugins/opensans-ftw/ "OpenSans FTW") plugin, written by George J. An installation link to this plugin can be found in the Restore Lost Functionality options screen.
 
+== Advanced Settings for Jetpack ==
+
+Some time ago Jetpack lost the ability to list all of the available modules, allowing you to turn them on and off individually. 
+
+This option, when activated, will add a new sub-menu to Jetpack named 'Advanced', where you can, once again, see and control the complete list of modules. The code to do this was written by [Jeremy Herve](https://github.com/jeherve/advanced-settings-for-jetpack "Advanced Settings for Jetpack").
+
 == Automatic Updates ==
 
 Since WordPress 3.7, minor updates have updated automatically. This is to ensure critical bugs and security updates are pushed out as quickly as possible. Major updates, though, require a manual initiation.
 
 A plugin by the name of [Update Control](https://wordpress.org/plugins/update-control/ "Update Control"), written by George Stephanis and Chip Bennett, allows you to control the behavior of automatic updates. You can switch off automatic updates but, equally, switch them on for major updates as well. An installation link to this plugin can be found in the Restore Lost Functionality options screen.
+
+== Classic Editor ==
+
+WordPress 5.0 is due to replace the editor with Gutenberg. For those who want to return it to how it is, the "Classic Editor" plugin will do just this.
 
 == Comment Text Field ==
 
@@ -110,6 +124,10 @@ Activating this option with this plugin will cause the Links administration menu
 
 Removed in WordPress 2.5 this bookmarklet, once saved to your browser favorites, will make it easy to add any site you're visiting to your Link Manager.
 
+= Press This ==
+
+Press This, available as Tool, allowed you to easily import the content from another web page to your own site, usually in the form of a post. In WordPress 4.9, this functionality was removed and moved to a plugin. Activating this option will restore the Press This capability - simply head to Tools -> Available Tools for all the details, once activated.
+
 == Restore Editor ==
 
 WordPress 4.7 removed the underline and justify buttons and re-arranged other buttons. This option will put everything back to how it was!
@@ -158,6 +176,14 @@ Only those functions which are currently disabled in your WordPress installation
 == Changelog ==
 
 [Learn more about my version numbering methodology](https://artiss.blog/2016/09/wordpress-plugin-versioning/ "WordPress Plugin Versioning")
+
+= 3.1 =
+* Enhancement: New option to restore the classic editor (once Gutenberg is introduced in WP 5.0 - I'n ahead of the curve here!)
+* Enhancement: New option to bring back Press This
+* Enhancement: New option to add advanced Jetpack menu
+* Enhancement: Streamlined the code that works out if a plugin is installed and/or active
+* Enhancement: Now converting all screen titles to uppercase for each word dynamically - this makes translation easier
+* Enhancement: Added a Github link to the plugin meta
 
 = 3.0.2 =
 * Maintenance: Removed donation links
