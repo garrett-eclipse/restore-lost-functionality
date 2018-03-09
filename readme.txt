@@ -4,7 +4,7 @@ Tags: blogroll, comment, dashboard, dns, embeds, image, link, shortlink, srcset,
 Requires at least: 4.6
 Tested up to: 4.9.4
 Requires PHP: 5.3
-Stable tag: 3.1
+Stable tag: 3.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,7 @@ Technical specification...
 * Licensed under [GPLv2 (or later)](http://wordpress.org/about/gpl/ "GNU General Public License")
 * Designed for both single and multi-site installations
 * PHP7 compatible
+* Passes [WordPress.com VIP](https://vip.wordpress.com) coding standards and fully compatible with their platform
 * Fully internationalized, ready for translations. **If you would like to add a translation to this plugin then please head to our [Translating WordPress](https://translate.wordpress.org/projects/wp-plugins/[plugin folder] "Translating WordPress") page**
 * Gutenberg ready
 
@@ -124,7 +125,7 @@ Activating this option with this plugin will cause the Links administration menu
 
 Removed in WordPress 2.5 this bookmarklet, once saved to your browser favorites, will make it easy to add any site you're visiting to your Link Manager.
 
-= Press This ==
+== Press This ==
 
 Press This, available as Tool, allowed you to easily import the content from another web page to your own site, usually in the form of a post. In WordPress 4.9, this functionality was removed and moved to a plugin. Activating this option will restore the Press This capability - simply head to Tools -> Available Tools for all the details, once activated.
 
@@ -176,6 +177,9 @@ Only those functions which are currently disabled in your WordPress installation
 == Changelog ==
 
 [Learn more about my version numbering methodology](https://artiss.blog/2016/09/wordpress-plugin-versioning/ "WordPress Plugin Versioning")
+
+= 3.1.1 =
+* Enhancement: Code quality enhancements to bring it in line with WordPress.com VIP coding standards
 
 = 3.1 =
 * Enhancement: New option to restore the classic editor (once Gutenberg is introduced in WP 5.0 - I'n ahead of the curve here!)
@@ -232,5 +236,5 @@ Only those functions which are currently disabled in your WordPress installation
 
 == Upgrade Notice ==
 
-= 3.1 =
-* New options added - Gutenberg, Jetpack, Press This!
+= 3.1.1 =
+* Now fully compatible with the WordPress.com VIP platform
