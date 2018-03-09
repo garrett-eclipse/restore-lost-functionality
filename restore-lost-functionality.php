@@ -3,7 +3,7 @@
 Plugin Name: Restore Lost Functionality
 Plugin URI: https://github.com/dartiss/restore-lost-functionality
 Description: Add or remove features to restore previous WordPress functionality.
-Version: 3.1
+Version: 3.1.1
 Author: David Artiss
 Author URI: https://artiss.blog
 Text Domain: restore-lost-functionality
@@ -120,7 +120,7 @@ add_action( 'admin_menu', 'restore_wp_menu_initialise' );
 
 function restore_wp_options() {
 
-	include_once( 'includes/options-screen.php' );
+	include_once( plugin_dir_path( __FILE__ ) . 'includes/options-screen.php' );
 
 }
 
@@ -137,7 +137,7 @@ function restore_wp_add_options_help() {
 	global $restore_wp_options_hook;
 	$screen = get_current_screen();
 
-	if ( $screen->id != $restore_wp_options_hook ) { return; }
+	if ( $screen->id !== $restore_wp_options_hook ) { return; }
 
 	$help_text = '<p>' . __( 'This plugin allows you to add/remove features to restore previous WordPress functionality. Where this function change requires more than a simple switch, and an existing plugin exists to do this, a link will be provided so that this plugin can be installed instead and it\'s installation status will be shown on this screen.', 'restore-lost-functionality' ) . '</p>';
 	$help_text .= '<p>' . __( 'Details are also provided on why the features were first added or removed - often it\'s down to streamlining the UI but sometimes there can be a more serious reason for the change. Please therefore read this information before proceeding.', 'restore-lost-functionality' ) . '</p>';
@@ -167,7 +167,7 @@ function restore_wp_add_options_help() {
 
 function restore_wp_check_plugin( $plugin_dir, $plugin_name = '' ) {
 
-	if ( '' == $plugin_name ) { $plugin_name = $plugin_dir . '.php'; }
+	if ( '' === $plugin_name ) { $plugin_name = $plugin_dir . '.php'; }
 
 	if ( is_plugin_active( $plugin_dir . '/' . $plugin_name ) ) {
 
