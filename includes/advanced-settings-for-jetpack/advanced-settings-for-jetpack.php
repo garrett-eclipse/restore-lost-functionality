@@ -40,12 +40,12 @@ function advanced_settings_jetpack_submenu() {
 	);
 
 	// This uses a `don't show if not connected` class so we need to add these manually.
-	add_action( "load-$hook",                array( $jetpack_settings, 'admin_help' ) );
-	add_action( "load-$hook",                array( $jetpack_settings, 'admin_page_load' ) );
-	add_action( "admin_head-$hook",          array( $jetpack_settings, 'admin_head' ) );
-	add_action( "admin_print_styles-$hook",  array( $jetpack_settings, 'admin_styles' ) );
+	add_action( "load-$hook", array( $jetpack_settings, 'admin_help' ) );
+	add_action( "load-$hook", array( $jetpack_settings, 'admin_page_load' ) );
+	add_action( "admin_head-$hook", array( $jetpack_settings, 'admin_head' ) );
+	add_action( "admin_print_styles-$hook", array( $jetpack_settings, 'admin_styles' ) );
 	add_action( "admin_print_scripts-$hook", array( $jetpack_settings, 'admin_scripts' ) );
-	add_action( "admin_print_styles-$hook",  array( $jetpack_settings, 'additional_styles' ) );
+	add_action( "admin_print_styles-$hook", array( $jetpack_settings, 'additional_styles' ) );
 }
 add_action( 'jetpack_admin_menu', 'advanced_settings_jetpack_submenu', 11 );
 
