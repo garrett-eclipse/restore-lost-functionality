@@ -22,7 +22,7 @@ The following features are available for adding/removing...
 * Remove SRCSET parameter from images (added in WordPress 4.4)
 * Add the ability to specify a title for links (removed in WordPress 4.2)
 * Restore the TinyMCE editor buttons to how they were (changed in WordPress 4.7)
-* Bring back the "classic" editor (to be removed in WordPress 5.0)
+* Bring back the "Classic Editor" (removed in WordPress 5.0)
 * Press This returns! It was removed in WordPress 4.9
 * Add an Advanced Settings menu for Jetpack - lists all the modules!
 

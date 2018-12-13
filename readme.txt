@@ -34,7 +34,7 @@ The following features are available for adding/removing...
 * Remove SRCSET parameter from images (added in WordPress 4.4)
 * Add the ability to specify a title for links (removed in WordPress 4.2)
 * Restore the TinyMCE editor buttons to how they were (changed in WordPress 4.7)
-* Bring back the "classic" editor (to be removed in WordPress 5.0)
+* Bring back the "Classic Editor" (removed in WordPress 5.0)
 * Press This returns! It was removed in WordPress 4.9
 * Add an Advanced Settings menu for Jetpack - lists all the modules!
 
@@ -182,7 +182,7 @@ Only those functions which are currently disabled in your WordPress installation
 * Enhancement: Code quality enhancements to bring it in line with WordPress.com VIP coding standards
 
 = 3.1 =
-* Enhancement: New option to restore the classic editor (once Gutenberg is introduced in WP 5.0 - I'n ahead of the curve here!)
+* Enhancement: New option to restore the Classic Editor (once Gutenberg is introduced in WP 5.0 - I'n ahead of the curve here!)
 * Enhancement: New option to bring back Press This
 * Enhancement: New option to add advanced Jetpack menu
 * Enhancement: Streamlined the code that works out if a plugin is installed and/or active
